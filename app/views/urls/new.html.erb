@@ -1,0 +1,10 @@
+<h3>This is urls/new</h3>
+<%= render 'form' %>
+<% if @saved %>
+	<p>Below is your shortened link, enjoy!</p>
+	<p><%= link_to @url.short_url, controller: :urls, action: :short, method: :GET, id: @url.id %></p>
+<% end %>
+<% if @errors %>
+	<p><%= @errors %></p>
+<% end %>
+<%= link_to 'Back', urls_path %>

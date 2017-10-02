@@ -1,0 +1,16 @@
+<table>
+<tr>
+<th>Original URL</th>
+<th>Shortened URL</th>
+</tr>
+
+<%  @urls.each do |url| %>
+	<tr>
+	<td> <%= link_to url.long_url, url_path(url) %> </td>
+	<td> <%= link_to url.short_url, controller: :urls, action: :short, method: :GET, id: url.id %></td>
+	</tr>   
+<% end %>
+</table>
+
+<h1>Click the link below to shorten a URl!</h1>
+<%= link_to "Shorten a Url!", new_url_path %>

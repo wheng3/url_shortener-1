@@ -12,6 +12,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 
 group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'database_cleaner'
+end
+
+group :development, :test do
   gem 'byebug'
   gem 'guard'
   gem 'guard-rspec'
